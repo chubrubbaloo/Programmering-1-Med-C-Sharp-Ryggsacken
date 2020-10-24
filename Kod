@@ -1,0 +1,64 @@
+using System;
+namespace Övning_2___Ryggsäcken
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //while loop och userInput som är en tom sträng.
+            string userInput = "";
+            bool isRunning = true;
+            while (isRunning)
+            {
+                Console.WriteLine("\n\t###########################");
+                Console.WriteLine("\t######## LOGGBOKEN ########");
+                Console.WriteLine("\t###########################");
+
+                //menyn
+                Console.WriteLine("\n\t[1] Lägg till föremål i ryggsäcken: ");
+                Console.WriteLine("\t[2] Kolla ryggsäckens innehåll");
+                Console.WriteLine("\t[3] Rensa innehåll");
+                Console.WriteLine("\t[4] Avsluta");
+                Console.Write("\tVälj: ");
+                Int32.TryParse(Console.ReadLine(), out int menuSelection); // Felhanteringsmetod med hjälp av .TryParse-metoden.
+               
+                //Switch-sats för menyvalen.
+                switch (menuSelection)
+                {
+                    case 1:
+                        Console.Write("\n\tSkriv in föremålet du vill lägga till i ryggsäcken: ");
+                        userInput = Console.ReadLine(); // Användaren skriver in en sträng att fylla ryggsäcken med.
+                        MenuExit(); // Anropar våran menyavslutning-metod.
+                        break;
+
+                    case 2:
+                        Console.WriteLine("\n\tRyggsäcken innehåller: " + userInput); // Skriver ut ryggsäckens nuvarande innehåll.
+                        MenuExit(); // Anropar våran menyavslutning-metod.
+                        break;
+
+                    case 3:
+                        Console.WriteLine("\n\tTömmer ryggsäcken!");
+                        userInput = ""; // "Nollställer" userInput till en tom sträng igen.
+                        MenuExit(); // Anropar våran menyavslutning-metod.
+                        break;
+
+                    case 4:
+                        isRunning = false; // Bryter ur loopen och stänger av programmet.
+                        break;
+
+                        // Ifall användaren matar in fel input vid menyval.
+                    default:
+                        Console.WriteLine("\tVar vänlig och välj mellan 1-4 från menyn!");
+                        MenuExit(); // Anropar våran menyavslutning-metod.
+                        break;
+                }
+            }
+        }
+        // En metod som får menyn att se mer "slick" ut.
+        static void MenuExit()
+        {
+            Console.WriteLine("\n\tTryck [ENTER] för att gå tillbaka till menyn");
+            Console.ReadLine();
+        }
+    }
+}

@@ -1,4 +1,4 @@
-# Programmering-1-C-Sharp---Ryggsacken
+# Programmering-1-Med-C-Sharp-Ryggsacken
 Du ska i den här övningen skriva ett mer komplext program som hanterar inmatning och utskrift. Programmet är en ryggsäck som styrs genom en meny. Menyn visar tillvalen som finns för användaren.
 
 I den här uppgiften ska vi skapa ett program.

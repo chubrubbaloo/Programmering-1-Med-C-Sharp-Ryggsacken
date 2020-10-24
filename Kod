@@ -11,7 +11,7 @@ namespace Övning_2___Ryggsäcken
             while (isRunning)
             {
                 Console.WriteLine("\n\t###########################");
-                Console.WriteLine("\t######## LOGGBOKEN ########");
+                Console.WriteLine("\t######## Ryggsäcken #######");
                 Console.WriteLine("\t###########################");
 
                 //menyn

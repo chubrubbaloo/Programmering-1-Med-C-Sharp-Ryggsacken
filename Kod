@@ -27,7 +27,7 @@ namespace Övning_2___Ryggsäcken
                 {
                     case 1:
                         Console.Write("\n\tSkriv in föremålet du vill lägga till i ryggsäcken: ");
-                        userInput = Console.ReadLine(); // Användaren skriver in en sträng att fylla ryggsäcken med.
+                        userInput = Console.ReadLine(); // Användaren skriver in ett objekt att fylla ryggsäcken med som sparas i en sträng.
                         MenuExit(); // Anropar våran menyavslutning-metod.
                         break;
 
